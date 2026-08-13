@@ -1,0 +1,157 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  --spacing-section: var(--spacing-section);
+  --spacing-container: var(--spacing-container);
+}
+
+:root {
+  /* Colors - الآن بصيغة HSL كاملة */
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(0 0% 4%);
+  --card: hsl(0 0% 100%);
+  --card-foreground: hsl(0 0% 4%);
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(0 0% 4%);
+  --primary: hsl(0 0% 4%);
+  --primary-foreground: hsl(0 0% 100%);
+  --secondary: hsl(36 20% 92%);
+  --secondary-foreground: hsl(0 0% 4%);
+  --accent: hsl(39 100% 50%);
+  --accent-foreground: hsl(0 0% 4%);
+  --muted: hsl(0 0% 96%);
+  --muted-foreground: hsl(0 0% 45%);
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(0 0% 89%);
+  --input: hsl(0 0% 89%);
+  --ring: hsl(0 0% 4%);
+
+  /* Radius */
+  --radius: 0rem;
+
+  /* Fonts */
+  --font-heading: "Bodoni Moda", serif;
+  --font-body: "Manrope", sans-serif;
+
+  /* Type Scale */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+  --text-8xl: 6rem;
+  --text-9xl: 8rem;
+
+  /* Spacing */
+  --spacing-section: 6rem;
+  --spacing-container: 1.5rem;
+}
+
+.dark {
+  --background: hsl(0 0% 4%);
+  --foreground: hsl(0 0% 100%);
+  --card: hsl(0 0% 6%);
+  --card-foreground: hsl(0 0% 100%);
+  --popover: hsl(0 0% 6%);
+  --popover-foreground: hsl(0 0% 100%);
+  --primary: hsl(0 0% 100%);
+  --primary-foreground: hsl(0 0% 4%);
+  --secondary: hsl(0 0% 15%);
+  --secondary-foreground: hsl(0 0% 100%);
+  --accent: hsl(39 100% 50%);
+  --accent-foreground: hsl(0 0% 4%);
+  --muted: hsl(0 0% 15%);
+  --muted-foreground: hsl(0 0% 65%);
+  --destructive: hsl(0 84% 60%);
+  --destructive-foreground: hsl(0 0% 100%);
+  --border: hsl(0 0% 20%);
+  --input: hsl(0 0% 20%);
+  --ring: hsl(0 0% 100%);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  .font-heading {
+    font-family: var(--font-heading), serif;
+  }
+  .font-body {
+    font-family: var(--font-body), sans-serif;
+  }
+  .text-heading {
+    font-family: var(--font-heading), serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+/* Layout Helpers */
+.container-wide {
+  @apply mx-auto w-full max-w-[1600px] px-4 sm:px-6 lg:px-8;
+}
+.container-narrow {
+  @apply mx-auto w-full max-w-300 px-4 sm:px-6 lg:px-8;
+}
+
+/* Section Spacing */
+.section-padding {
+  @apply py-section;
+}
+
+/* Marquee Animation */
+@layer utilities {
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  .animate-marquee {
+    animation: marquee 15s linear infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee {
+      animation: none;
+    }
+  }
+}
