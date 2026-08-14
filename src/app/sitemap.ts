@@ -3,7 +3,7 @@ import { products } from "@/data/products";
 import { collections } from "@/data/collections";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://noire-demo.vercel.app"; // استبدلها بالدومين النهائي
+  const baseUrl = "https://noire-fashion-demo.vercel.app/"; // استبدلها بالدومين النهائي
 
   const staticPages = [
     { url: `${baseUrl}/`, lastModified: new Date() },

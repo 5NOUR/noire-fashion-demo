@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/admin/"],
     },
-    sitemap: "https://noire-demo.vercel.app/sitemap.xml", // استبدلها بالدومين النهائي
+    sitemap: "https://noire-fashion-demo.vercel.app/sitemap.xml", // استبدلها بالدومين النهائي
   };
 }
