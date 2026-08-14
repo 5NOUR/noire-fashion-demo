@@ -21,7 +21,7 @@ export const brandConfig = {
     body: "Manrope",
   },
   socials: {
-    instagram: "https://instagram.com/accounts",
+    instagram: "https://instagram.com/",
     facebook: "https://facebook.com/profile.php",
     tiktok: "https://tiktok.com/",
     pinterest: "https://pinterest.com/",
