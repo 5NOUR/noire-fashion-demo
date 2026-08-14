@@ -21,14 +21,14 @@ export const brandConfig = {
     body: "Manrope",
   },
   socials: {
-    instagram: "https://instagram.com/noire",
-    facebook: "https://facebook.com/noire",
-    tiktok: "https://tiktok.com/@noire",
-    pinterest: "https://pinterest.com/noire",
+    instagram: "https://instagram.com/accounts",
+    facebook: "https://facebook.com/profile.php",
+    tiktok: "https://tiktok.com/",
+    pinterest: "https://pinterest.com/",
   },
   contact: {
-    email: "hello@noire.com",
-    phone: "+1 (555) 000-0000",
+    email: "tamernoureldean@gmail.com",
+    phone: "+20 15 540 42400",
     address: "12 Rue de la Mode, Paris, France",
   },
   announcement: {
